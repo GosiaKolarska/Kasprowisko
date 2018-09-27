@@ -1,0 +1,28 @@
+.main-slider {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    .content {
+        margin: auto;
+        width: 50%;
+        h1 {font-size: 36px;}
+        .subtitle {font-size: 24px; padding-top: .8em;}
+    }
+}
+
+@media(max-width: 1024px){
+	.main-slider .content {width: 70%;}
+}
+@media(max-width: 768px){
+	.main-slider .content {width: 100%; padding: 3em;}
+}
+@media(max-width: 576px){
+    .main-slider
+        .content{
+            h1 {font-size: 26px;}
+            .subtitle { font-size: 20px;}
+        }
+}

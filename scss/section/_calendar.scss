@@ -1,0 +1,72 @@
+.section-calendar {
+    background: #0f80c6;
+    padding: 15.5em 1em 4em;
+    position: relative;
+    height: 920px;
+    .calendar__row {
+        position: absolute;
+        left: calc(50% - 650px);
+        .calendar__date {
+            max-width: 1300px;
+            margin: auto;
+            width: 100%;
+            position: relative;
+            .wrapper {
+                background: #0f80c6;
+                position: absolute;
+                top: -140px;
+                width: 25%;
+                padding: 2em 1em .5em;
+                color: #fff;
+                cursor: pointer;
+                .calendar__day {font-size: 30px; display: inline-block; font-weight: bold; padding-right: .5em;}
+                span {color: #b6cddb;}
+            }
+        }
+        > .row {
+            background: #fff;
+            max-width: 1300px;
+            margin: auto;
+            height: 550px;
+            position: relative;
+            // visibility: hidden;
+            min-width: 1300px;
+        }
+        .calendar__column{
+            padding: 0;
+            .calendar__loc-item {height: 57px; font-weight: bold; color: $dark-grey; text-align: center; position: absolute; top: -56px; width: 100%; background: #fff; padding: 1em 0; border-bottom: 1px solid #d8d8d8;}
+            .calendar__list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                .calendar__list-item {color: #777; padding: 1em; border-bottom: 1px solid #d8d8d8; height: 25%; display: flex; align-items: center; }
+            }
+            &:first-child {
+                .calendar__list-item {font-weight: bold;}
+                .calendar__list-item:before {content: ''; background-image: url(../img/clock.png); width: 14px; height: 14px; background-size: contain; background-repeat: no-repeat; margin-right: .5em;}
+                .calendar__loc-item {height: 57px;}
+            }
+        }
+        .row:nth-child(2) .calendar__date .wrapper {left: 25%;}
+        .row:nth-child(3) .calendar__date .wrapper {left: 50%;}
+        .row:nth-child(4) .calendar__date .wrapper {left: 75%;}
+        .row.active {
+            .wrapper {background: #0d5888;}
+            > .row {visibility: visible; z-index: 9;}
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .section-calendar {display: none;}
+}
+@media(max-width: 992px) {
+	//.section-calendar {height: 100%; }
+	//.section-calendar .calendar__row {position: static;}
+	//.section-calendar .calendar__row >.row {height: auto;}
+	//.section-calendar .calendar__date .wrapper span {display: block;}
+	//.section-calendar .calendar__date .wrapper {top: -162px}
+	//.section-calendar .calendar__column { height: 100%; }
+	//.section-calendar .calendar__column .calendar__loc-item {position: static;}
+}

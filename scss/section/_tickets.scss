@@ -1,0 +1,239 @@
+.ticket__extra-list {
+    position: relative;
+    hr {margin: 7em 0 1em; width: 96%;}
+    .ticket__netto{position: absolute; bottom: -30px;}
+    .extra-list__title {text-transform: uppercase; color: $dark-grey; font-weight: bold; text-transform: uppercase; font-size: 32px; margin-bottom: .6em;}
+    .extra-list__list{
+        width: 100%;
+        margin: 0;
+        padding-right: 3em;
+    }
+}
+.extra-list__col {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+    .extra-list__item {
+        border: 1px solid #dbdbdb;
+        background: #fafafa;
+        padding: 1.5em 1em;
+        margin-bottom: 1em !important;
+        height: 100%;
+        .extra-list__icon {
+            align-items: center;
+            display: flex;
+            img {object-fit: contain; max-width: 100%;}
+        }
+        &:last-child {margin-bottom: 0!important;}
+        h4 {color: $dark-grey; font-size: 20px; line-height: 19px; letter-spacing: -0.2px; font-weight: bold; margin-bottom: 4px;}
+        p{font-size: 14px; padding-top: 0.3px!important; line-height: 19px; letter-spacing: -0.2px;}
+        .price {font-weight: bold; font-size: 24px; letter-spacing: -.3px; color: $dark-grey;}
+        .extra-list__cont {padding-right: 0;}
+    }
+}
+
+.price-food{
+    padding-left: 0;
+    > .row {border: 1px solid #dbdbdb; background: #fafafa; padding: 1.5em; margin: 0; height: 100%;}
+    .price-food__icon {padding-top: 1em;}
+    h3 {padding-bottom: .8em; color: $dark-grey; font-size: 20px; font-weight: bold; line-height: 0.95; letter-spacing: -0.2px;}
+    .price-food__wrap {display: flex; justify-content: space-between;}
+    .price-food__wrap p {margin:0; padding-bottom: 3px!important; padding-top: 3px!important; font-weight: 700; color: $dark-grey; font-size: 16px;}
+    .price-food__item {padding: .7em 0;}
+    .price-food__item h5 { text-transform: uppercase; color: #f5a623; letter-spacing: -0.2px; font-size: 14px; font-weight: 600; margin: 0;}
+}
+
+.section-ticket {
+    display: flex;
+    padding: 6em 2em;
+    max-width: 1400px;
+    margin: auto;
+    .ticket__col-left {
+        width: 66.66%;
+        .ticket-list {
+            display: flex;
+            .ticket__item {
+                width: 50%;
+                padding-right: 4em;
+                .ticket__title {width: 90%; padding-bottom: 0; margin-bottom: 0; color: $dark-grey; text-transform: uppercase; font-size: 32px; line-height: 30px; letter-spacing: -.4px; font-weight: 700;}
+                .ticket__date {font-size: 22px; color: $dark-grey; letter-spacing: -.2px; font-weight: 500;}
+                .ticket__desc{padding: 2em 0; color: $dark-grey; font-size: 18px;}
+                .ticket_dropdown {
+                    > div {color: $dark-grey; font-weight: bold; margin-bottom: 5px;}
+                    select {width: 337px; font-weight: bold; color: $dark-grey;padding: .5em; background: #fafafa; border-radius: 0; border: 1px solid #dbdbdb;}
+                }
+                .btn-wrapper {
+                    transition: .2s;
+                    position: relative;
+                    background: #f5a623;
+                    border-radius: 2px;
+                    padding: .8em 1.35em;
+                    padding-right: 2.5em;
+                    display: inline-block;
+                    margin-top: 2em;
+                    &:hover {background: #cedce8;
+                        .btn-link {
+                            color: #333;
+                            &:after {border-color: #000;}
+                        }
+                    }
+                }
+                .btn-link {transition: .2s; font-weight: bold; font-size: 18px; letter-spacing: -.2px; text-align: center; color: #fff; display: block; text-decoration: none;}
+                .btn-link:after {transition: .2s; content: ""; position: absolute; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); border: solid #fff; border-width: 0 3px 3px 0; display: inline-block; padding: 3px; right: 1em; border-radius: 2px; top: calc(50% - 3px); }
+                .ticket__price {padding-top: .5em; font-weight: bold; color: $dark-grey; font-size: 34px; letter-spacing: -.4px;}
+
+                &:nth-child(2) .ticket__wrapper {filter: blur(5px); pointer-events: none;}
+            }
+        }
+    }
+    .ticket__col-right {
+        width: 33.33%;
+        .ticket__item {
+            background: #000;
+            padding: 2em;
+            color: #fff;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 160px;
+            .ticket__title {color: #fff; padding:0; margin: 0;}
+            .ticket__desc {color: #fff; padding: 2em 0; font-size: 18px;}
+            .ticket__price {
+                color: #fff;
+                padding-top:0;
+                padding-top: .5em;
+                font-weight: bold;
+                font-size: 34px;
+                letter-spacing: -.4px;
+            }
+            .ticket__date {color: #fff; padding-bottom: 2em; font-size: 22px; letter-spacing: -.2px; font-weight: 500;}
+            .btn-wrapper {
+                background: #fff;
+                margin-top: 1em;
+                transition: .2s;
+                transition: .2s;
+                position: relative;
+                border-radius: 2px;
+                padding: .8em 1.35em;
+                padding-right: 2.5em;
+                display: inline-block;
+                margin-top: 2em;
+                .btn-link {
+                    color: #000;
+                    transition: .2s;
+                    font-weight: bold;
+                    font-size: 18px;
+                    letter-spacing: -.2px;
+                    text-align: center;
+                    display: block;
+                    text-decoration: none;
+                    &:after {
+                        transition: .2s;
+                        content: "";
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        -webkit-transform: rotate(-45deg);
+                        border: solid #000;
+                        border-width: 0 3px 3px 0;
+                        display: inline-block;
+                        padding: 3px;
+                        right: 1em;
+                        border-radius: 2px;
+                        top: calc(50% - 3px);
+                    }
+                }
+                .btn-link:after {border-color: #000;}
+                &:hover {
+                    background: rgb(206, 220, 232);
+                    .btn-link {color: $light-grey;}
+                    .btn-link:after {border-color: $light-grey;}
+                }
+            }
+        }
+    }
+}
+
+.ticket__variations {
+    position: relative;
+    .ticket__detail {
+        .ticket__info {visibility: hidden;}
+        .variations__title{width: 50%; display: inline-block; text-align: center; padding: .5em; border: 1px solid #fff; font-weight: bold; cursor: pointer; font-size: 20px;}
+    &:nth-child(1) .ticket__info {margin-bottom: 0.6em;}
+    &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        pointer-events: none;
+        .variations__title{position: absolute; right: 0; pointer-events: auto;}
+        .ticket__info {margin-top: 3.2em;}
+    }
+    &.active {
+        .ticket__info {visibility: visible;}
+        .variations__title {background: #fff; color: #000;}
+        }
+    }
+}
+
+.select2-container--default {
+    .select2-selection--single {
+        font-weight: bold;
+        color: $dark-grey;
+        padding: .5em !important;
+        width: 100% !important;
+        background: #fafafa;
+        border-radius: 0;
+        border: 1px solid #dbdbdb !important;
+        height: auto;
+        .select2-selection__arrow b {border-width: 8px 4px 0 4px; margin-top: 0; top: calc(50% - -5px);}
+        .select2-selection__rendered {color: $dark-grey;}
+    }
+    .select2-results__option--highlighted[aria-selected] {background: #fff!important; color: $dark-grey;}
+    .select2-results__option {background: #fafafa!important; color: $dark-grey; padding: 8px 15px; border-bottom: 1px solid #dbdbdb; line-height: 28px;}
+    .select2-results>.select2-results__options {max-height: 300px;}
+    &.select2-container--open {
+        .select2-selection{border-bottom: 0!important;}
+        .select2-dropdown--below {border: 1px solid #dbdbdb; border-bottom: 1px;}
+    }
+    &.select2-selection:focus { outline: none; }
+}
+
+@media(max-width: 1024px){
+	.section-products {padding: 2em 2em 4em;}
+	.ticket__extra-list .extra-list__list {width: 100%; padding: 0;}
+}
+@media(max-width: 992px) {
+	.section-ticket {
+        flex-direction: column-reverse;
+        padding: 6em 3em;
+        .ticket__col-left {
+            width: 100%;
+            .ticket-list .ticket__item {
+                &:nth-child(1) {padding-right: 1.5em; padding-left: 0;}
+                &:nth-child(2) {padding-right: 0; padding-left: 1.5em;}
+                .ticket_dropdown select {width: 100%;}
+            }
+        }
+        .ticket__col-right {width: 100%; margin-bottom: 4em;}
+    }
+    .select2-container {width: 100%!important;}
+    .extra-list__col {padding-left: 0; padding-right: 1em;}
+}
+@media(max-width: 576px) {
+    .section-ticket {
+        padding: 6em 2em;
+        .ticket__col .ticket-list .ticket__item { width: 100%; padding-right: 0; }
+        .ticket__col-left {
+            .ticket-list .ticket__item {
+                &:nth-child(1) {padding-right: 0; padding-left: 0;}
+                &:nth-child(2) {padding-right: 0; padding-left: 0;}
+            }
+        }
+    }
+    .extra-list__col {padding-right: 0;}
+	.section-ticket .ticket-list {flex-direction: column;}
+    .section-ticket .ticket-list .ticket__item:first-child {margin-bottom: 4em;}
+    .ticket__col-right .ticket__item {padding: 1.5em;}
+    .ticket__variations .ticket__detail .variations__title {padding: .3em;}
+    .section-ticket .ticket__col-right .ticket__item {padding: 1.5em;}
+    .section-ticket .ticket__col-right .ticket__detail:nth-child(2) .ticket__price {padding-top: 0;}
+}

@@ -1,0 +1,59 @@
+body {font-family: 'Titillium Web', sans-serif;}
+h1 {font-size: 50px; letter-spacing: 1px;}
+h2 {font-size: 40px;}
+p {font-size: 20px;}
+
+@media(max-width: 576px){
+	h1 {font-size: 26px;}
+	h2 {font-size: 32px;}
+	h3 {font-size: 24px;}
+	p {font-size: 16px;}
+}
+
+// COLORS
+$orange: #f5a623;
+$light-grey: #333;
+$dark-grey: #777;
+
+
+.btn {text-decoration: none; font-size: 14px; background: $orange; padding: .8em 2em; text-decoration: none; display: inline-block; margin-top: 2em; text-transform: uppercase; font-weight: bold; letter-spacing: .5px;}
+.btn:hover {background: rgba(0,0,0,0.2);}
+.button:hover {background: rgba(0, 0, 0, 0.8);}
+.row {margin: 0;}
+#page {position: relative;}
+.btn-wrapper {cursor: pointer;}
+.wpsm-show {color: $orange!important; font-size: 18px!important; padding-top: .5em; margin: 0;}
+.wpsm-hide {color: $orange!important; font-size: 18px!important; padding-top: .5em; margin: 0;}
+#wprmenu_bar .menu_title a {display: flex; align-items: center;}
+
+
+/* SECTION: COL TEXT */
+.two-columns > .row {padding: 8em 0 5em; max-width: 1300px; margin: auto;}
+.two-columns .row .col {padding: 0 2em;}
+@media(max-width: 992px) {
+	.two-columns > .row {padding: 8em 1em 5em;}
+}
+@media(max-width: 576px) {
+	.two-columns > .row { padding: 6em 0;}
+}
+
+/* SECTION: COL IMG + COL TEXT */
+.column__content-image .row.img-left {flex-direction: row-reverse;}
+.column__content-image .row.img-right {flex-direction: row;}
+.column__content-image .row .col-content {padding: 4em 7em;}
+.column__content-image .row .col-img .img-parallax {background-size: 50%;  min-height: 580px; background-attachment: fixed; background-repeat: no-repeat; height: 100%;}
+.column__content-image .row .col-img {padding: 0;}
+.column__content-image .row.img-right .col-img .img-parallax { background-position: right bottom;}
+.column__content-image .row.img-left .col-img .img-parallax { background-position: left bottom;}
+@media(max-width: 992px){
+	.column__content-image {
+		.row {
+			.col-img .img-parallax {background-size: 100%}
+			.col-content {padding: 4em 3em;}
+		}
+	}
+}
+@media(max-width: 576px){
+	.column__content-image .row .col-content { padding: 4em 2em; }
+	.column__content-image .row .col-img .img-parallax {background-size: cover; background-position: center!important; min-height: 400px;}
+}

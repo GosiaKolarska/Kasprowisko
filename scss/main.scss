@@ -1,0 +1,15 @@
+@import 'mixins';
+@import 'base';
+
+//PAGES
+@import 'section/slider';
+@import 'section/calendar';
+@import 'section/tickets';
+@import 'section/columns';
+@import 'section/partners';
+@import 'section/map';
+@import 'section/contact';
+
+// PARTIALS
+@import 'partials/header';
+@import 'partials/footer';

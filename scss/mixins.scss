@@ -1,0 +1,118 @@
+// USAGE: @include display-flex();
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  // USAGE: @include align-items($align-items);
+  @mixin align-items($align-items) {
+    -webkit-box-align: $align-items;
+    -ms-flex-align: $align-items;
+    align-items: $align-items;
+  }
+
+  // USAGE: @include align-self(center);
+  @mixin align-self($align-self) {
+    align-items: $align-self;
+    -webkit-align-self: $align-self;
+  }
+
+  // USAGE: @include flex-direction(row)
+  @mixin flex-direction($flex-direction) {
+    -webkit-box-orient: $flex-direction;
+    -webkit-box-direction: $flex-direction;
+    -ms-flex-direction: $flex-direction;
+    flex-direction: $flex-direction;
+  }
+
+  // USAGE: @include justify-content(space-between);
+  @mixin justify-content($justify-content) {
+    justify-content: $justify-content;
+    -webkit-justify-content: $justify-content;
+    -moz-justify-content: $justify-content;
+  }
+
+  // USAGE: @include background-size(cover);
+  @mixin background-size($background-size) {
+    background-size: $background-size;
+    -webkit-background-size: $background-size;
+    -moz-background-size: $background-size;
+    -o-background-size: $background-size;
+  }
+
+  // USAGE: @include transform(scaleX(-1) translateY(-50%))
+  @mixin transform($value) {
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+    transform: $value;
+  }
+
+  // USAGE: @include animation('slide-down 5s 3');
+  @mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+
+  // USAGE: @include transition(color .3s ease);
+  //USAGE: @include transition(.3s);
+  @mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+
+  // USAGE: @include animation(block-1-animate, $speed, ease-out, infinite)
+  @mixin animation($animation, $duration, $anim-transition, $delay, $fill-mode) {
+    animation-name: $animation;
+    animation-duration: $duration;
+    animation-timing-function: $anim-transition;
+    animation-delay: $delay;
+    animation-fill-mode: $fill-mode;
+    -webkit-animation-name: $animation;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-timing-function: $anim-transition;
+    -webkit-animation-delay: $delay;
+    -webkit-animation-fill-mode: $fill-mode;
+    -moz-animation-name: $animation;
+    -moz-animation-duration: $duration;
+    -moz-animation-timing-function: $anim-transition;
+    -moz-animation-delay: $delay;
+    -moz-animation-fill-mode: $fill-mode;
+    -o-animation-name: $animation;
+    -o-animation-duration: $duration;
+    -o-animation-timing-function: $anim-transition;
+    -o-animation-delay: $delay;
+    -o-animation-fill-mode: $fill-mode;
+  }
+
+  // USAGE: @include column-count(3);
+  @mixin column-count($column-count) {
+    column-count: $column-count;
+    -webkit-column-count: $column-count;
+    -moz-column-count: $column-count;
+  }
+
+  @mixin display-sticky(){
+      display: -webkit-sticky;
+      display: sticky;
+  }
